@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+VN+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #535c68;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.analog-clock {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 10px ridge red;
+  position: relative;
+}
+.analog-clock::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.analog-clock::before {
+  content: "Ajenta";
+  color: red;
+  font-size: 30px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.number {
+  --rotate: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: red;
+  text-align: center;
+  transform: rotate(var(--rotate));
+}
+.number::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+}
+.needle {
+  --rotation: 0;
+  position: absolute;
+
+  background-color: red;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 8;
+  border: 1px solid gray;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.hours {
+  height: 25%;
+  width: 10px;
+  --rotation: 0;
+}
+.min {
+  width: 7px;
+  height: 40%;
+  --rotation: 300;
+}
+.sec {
+  height: 45%;
+  width: 3px;
+  --rotation: 60;
+}
+.number-1 {
+  --rotate: 30deg;
+}
+.number-2 {
+  --rotate: 60deg;
+}
+.number-3 {
+  --rotate: 90deg;
+}
+.number-4 {
+  --rotate: 120deg;
+}
+.number-5 {
+  --rotate: 150deg;
+}
+.number-6 {
+  --rotate: 180deg;
+}
+.number-7 {
+  --rotate: 210deg;
+}
+.number-8 {
+  --rotate: 240deg;
+}
+.number-9 {
+  --rotate: 270deg;
+}
+.number-10 {
+  --rotate: 300deg;
+}
+.number-11 {
+  --rotate: 330deg;
+}
+.number-12 {
+  --rotate: 360deg;
+}
